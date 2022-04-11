@@ -23,21 +23,64 @@
 
         .header{
             width: 100%;
-            height: 100px;
+            height: 80px;
+            top: 0;
             border: 1px solid rgba(128, 128, 128, 0.39);
             background-color: white;
             position: fixed;
             
         }
+       
+
+        .utilWrapper ul{
+            margin-left: 900px;
+            
+        }
         
-        .wrapper-menu ul li{
-            font-size: 20pt;
-            font-weight: 500;
-            color: black;
-            margin: 20px;
-            align-items: center;
+       
+        
+
+      
+        .utilWrapper ul li{
+            /* 서브 nav */
             display: inline-block;
+            padding-left: 200px ;
+            font-size: 15px;
+         
+        }
+
+        
+        .nav{
+            
+            position:relative;
+        }
+
+        .nav ul{
+            position: absolute;
+            display: flex;
+            /* margin-top: 20px; */
+            font-size: 20px;
+        
+        
+            
+            
+        }
+        
+        
+        .nav ul li{
+            /* 메인 nav */
+            list-style: none;
             margin-left: 200px;
+            padding-left: 30px;
+            
+        }
+        
+        .logo img{
+            margin-left: 50px;
+            margin-top: 10px;
+            width: 100px;
+            height: auto;
+            
         }
         
 
@@ -45,25 +88,45 @@
 </head>
 <body>
     <div class="container">
-        <div class="logo-caption">
-            <div class="logo">
+      
+
+    <div class="header">
+   
+            <div class="innerHead">
+                <div class="findRes">
+                    <button type="button">
+                        SEARCH BRANCH
+                    </button>
+                </div>
+                <div class="utilWrapper">
+                <ul>
+                    <li>SING IN</li>
+                    <li>JOIN NOW</li>
+                    <li>MY RESERVATION</li>
+                </ul>
+            </div>
+            </div>
+            
+        <div class="outerArea">
+           <div class="nav">
+               <div class="logo">
+            <img src="nike.jpg" alt="">
+                </div>
+                <ul>
+                    <li>ABOUT</li>
+                    <li>LOCATIONS</li>
+                    <li>MENU</li>
+                    <li>CATERING & PARTY TRAYS</li>
+                    <li>CELEBRATION CAKES</li>
+                </ul>
+      
             </div>
         </div>
-        <div class="header">
-         
-                <div class="wrapper-menu">
-                    <ul>
-                        <li>menu</li>
-                        <li>menu</li>
-                        <li>menu</li>
-                        <li>menu</li>
-                        <li>menu</li>
-                    </ul>
-                </div>
-        </div>
     </div>
-          <div class="background">
-    <div class="forms">
+    <!-- head -->
+
+        <div class="background">
+        <div class="forms">
         <input id="resevationDate" type="date">
         <select id="menu">
            <option value="null">메뉴를 선택해주세요</option>
@@ -76,7 +139,9 @@
         <br><br><button id="btn" type="button">예약하기</button>
     </div>
 </div>
+
 </div>
+
 </body>
 <script
  src="https://code.jquery.com/jquery-3.6.0.min.js"
