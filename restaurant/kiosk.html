@@ -12,13 +12,14 @@
             box-sizing: border-box;
         }
 
-        .background{
+        .mainAria01{
             background-image: url(main.jpg);
             width: 100%;
             height: 100vh;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+            
         }
 
         .header{
@@ -37,15 +38,12 @@
             
         }
         
-       
-        
-
-      
         .utilWrapper ul li{
             /* 서브 nav */
             display: inline-block;
             padding-left: 200px ;
             font-size: 15px;
+            color: rgba(0, 0, 0, 0.596);
          
         }
 
@@ -60,19 +58,13 @@
             display: flex;
             /* margin-top: 20px; */
             font-size: 20px;
-        
-        
-            
-            
         }
-        
         
         .nav ul li{
             /* 메인 nav */
             list-style: none;
             margin-left: 200px;
             padding-left: 30px;
-            
         }
         
         .logo img{
@@ -82,7 +74,27 @@
             height: auto;
             
         }
-        
+        .forms{
+            display: flex;
+            align-items: center;
+            margin-top: 500px;
+            margin-left: 450px;
+            position: absolute;
+            background-color: rgba(128, 128, 128, 0.363);
+            width: 1000px;
+            height: 200px;
+            justify-content: space-evenly;
+
+        }
+
+        .selectInner input{ 
+            /* 날짜설정 */
+            height: 50px;
+            width: 400px;
+            font-size: 20px;
+            
+        }
+
 
     </style>
 </head>
@@ -107,10 +119,10 @@
             </div>
             </div>
             
-        <div class="outerArea">
+        <div class="outerHead">
            <div class="nav">
                <div class="logo">
-            <img src="nike.jpg" alt="">
+            <img src="#" alt="">
                 </div>
                 <ul>
                     <li>ABOUT</li>
@@ -124,21 +136,26 @@
         </div>
     </div>
     <!-- head -->
+    <div class="revArea">
+        <div class="mainAria01">
+            <div class="selectInner">
+            <form id="mainDiningForm" name="mainResveForm" method="post">
+            <input type="hidden" name="sysCode" id="sysCode" value="GJB">
+            <input type="hidden" name="hotlSysCode" id="hotlSysCode" value="GJB">
+            <input type="hidden" name="ckinDate" id="ckinDate" value="2022.04.13">
+            <input type="hidden" name="ckoutDate" id="ckoutDate" value="2022.04.15">
+            <input type="hidden" name="night" id="night" value="2">
+            <input type="hidden" name="roomCnt" id="roomCnt" value="3">
+            <input type="hidden" id="maxAdlt" value="3">
+            <div class="selecRoom" role="area" style="display: none;" ></div>
+        </form>
+        </div>
+        </div>
 
-        <div class="background">
-        <div class="forms">
-        <input id="resevationDate" type="date">
-        <select id="menu">
-           <option value="null">메뉴를 선택해주세요</option>
-           <option value="mar">마르게리따 피자</option>
-           <option value="mas">마스카포네 피자</option>
-           <option value="eggplant">가지그라탕</option>
-           <option value="bong">봉골레파스타</option>
-           <option value="lom">로메인 샐러드</option>
-        </select>
-        <br><br><button id="btn" type="button">예약하기</button>
     </div>
-</div>
+    
+        
+        
 
 </div>
 
